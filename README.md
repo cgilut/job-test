@@ -1,2 +1,2 @@
 # job-test
-hotelsru job tests
+Hotels.ru job tests
