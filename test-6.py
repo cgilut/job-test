@@ -38,3 +38,5 @@ for i in range(1, integer_input + 1):
     print()
 
 multiplication_table(integer_input)
+
+# Время выполнения 60 минут
