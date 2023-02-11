@@ -12,12 +12,14 @@ while integer_input is None:
     user_input = input("Пожалуйста, введите количество компьютеров: ")
     try:
         integer_input = int(user_input)
+        # Проверка на положительное число
         if integer_input < 1:
             print("Ошибка, введенное число не является положительным.")
             integer_input = None
     except ValueError:
         print("Ошибка, введенное значение не является целым числом.")
 
+# Находим последние цифры и определяем падеж "компьютера"
 if 5 <= integer_input % 100 <= 20:    
     print(str(number_of_computers(integer_input)) + " компьютеров")
 elif integer_input % 10 == 1:
