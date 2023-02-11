@@ -5,8 +5,22 @@
 
 def city_list():
     # Запрашиваем количество городов
-    number_of_cities = int(input("Пожалуйста, укажите количество городов в массиве: "))
+    number_of_cities = None
+
+    while number_of_cities is None:
+        user_input = input("Пожалуйста, укажите количество городов в массиве: ")
+        try:
+            number_of_cities = int(user_input)
+            if number_of_cities< 1:
+                print("Ошибка, введенное число не является положительным.")
+                number_of_cities = None
+        except ValueError:
+            print("Ошибка, введенное значение не является целым числом.")
+            
+
+
     array_city= []
+
     # Заполняем массив названиями городов
     for i in range(number_of_cities):
         city = input("Пожалуйста, введите название города: ")
