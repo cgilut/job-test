@@ -19,15 +19,16 @@ while integer_input is None:
     except ValueError:
         print("Ошибка, введенное значение не является целым числом.")
 
+
 k = 2
 
 while True:
     if integer_input % k == 0 and integer_input != k or integer_input == 1:
         print("Число " + str(integer_input) + " не является простым.")
-        break
-    if integer_input % k == 0 and integer_input == k:
+        # break
+    elif integer_input % k == 0 and integer_input == k:
         print("Число " + str(integer_input) + " является простым.")
-        break
+        # break
     else:
         k += 1
 
