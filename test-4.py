@@ -22,7 +22,7 @@ while integer_input is None:
 k = 2
 
 while True:
-    if integer_input % k == 0 and integer_input != k:
+    if integer_input % k == 0 and integer_input != k or integer_input == 1:
         print("Число " + str(integer_input) + " не является простым.")
         break
     if integer_input % k == 0 and integer_input == k:
@@ -30,3 +30,5 @@ while True:
         break
     else:
         k += 1
+
+# Время выполнения 40 минут
