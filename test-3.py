@@ -12,6 +12,9 @@ while integer_input is None:
     user_input = input("Пожалуйста, введите количество компьютеров: ")
     try:
         integer_input = int(user_input)
+        if integer_input < 1:
+            print("Ошибка, введенное число не является положительным.")
+            integer_input = None
     except ValueError:
         print("Ошибка, введенное значение не является целым числом.")
 
